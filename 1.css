@@ -1,0 +1,113 @@
+     * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: #ff8800
+            color: white;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        .welcome-container {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+        }
+        
+        .welcome-content {
+            max-width: 800px;
+            z-index: 2;
+        }
+        
+        .welcome-title {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            animation: fadeIn 1.5s ease-in;
+            color: #ff8800;
+        }
+        
+        .welcome-subtitle {
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            color: #d4edda;
+            animation: fadeIn 2s ease-in;
+            color: #ff8800;
+        }
+        
+        .welcome-text {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            line-height: 1.8;
+            animation: fadeIn 2.5s ease-in;
+            color: #ff8800;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: #ff9900;
+            color: white;
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            animation: fadeIn 3s ease-in;
+        }
+        
+        .btn:hover {
+            background: #3a6b4a;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+        
+        .features {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            margin-top: 50px;
+            flex-wrap: wrap;
+        }
+        
+        .feature {
+            background: rgba(255,255,255,0.1);
+            padding: 20px;
+            border-radius: 15px;
+            width: 200px;
+            backdrop-filter: blur(10px);
+            animation: fadeIn 3.5s ease-in;
+        }
+        
+        .feature i {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: #8fb996;
+        }
+        
+        .background-elements {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            overflow: hidden;
+        }
+        
+        .mountain {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 150px;
+        }
