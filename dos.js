@@ -1,28 +1,14 @@
-const hamburger = document.querySelector(".hamburger");
-const navMenu = document.querySelector(".nav-menu");
-
-hamburger.addEventListener("click", mobileMenu);
-
-function mobileMenu() {
-    hamburger.classList.toggle("active");
-    navMenu.classList.toggle("active");
-}
-
-const navLink = document.querySelectorAll(".nav-link");
-
-navLink.forEach(n => n.addEventListener("click", closeMenu));
-
-function closeMenu() {
-    hamburger.classList.remove("active");
-    navMenu.classList.remove("active");
-}
-
-window.addEventListener("scroll", function() {
-    const header = document.querySelector(".header");
-    if (window.scrollY > 50) {
-        header.style.backgroundColor = "rgba(255, 255, 255, 0.98)";
-        header.style.padding = "0";
-    } else {
-        header.style.backgroundColor = "rgba(255, 255, 255, 0.95)";
+// Быстрый скрипт для меню
+document.addEventListener('DOMContentLoaded', function() {
+    // Создаем гамбургер меню
+    const menu = document.querySelector('.menu');
+    if (menu && window.innerWidth <= 768) {
+        const toggleBtn = document.createElement('button');
+        toggleBtn.innerHTML = '☰ Меню';
+        toggleBtn.style.cssText = 'padding: 10px 20px; background: #4299e1; color: white; border: none; border-radius: 5px; margin-left: auto;';
+        toggleBtn.onclick = () => menu.classList.toggle('active');
+        
+        const topMenu = document.querySelector('.top-menu');
+        if (topMenu) topMenu.appendChild(toggleBtn);
     }
 });
