@@ -172,22 +172,6 @@ body {
         display: none !important;
     }
     
-    /* Гамбургер меню */
-    .menu-toggle {
-        display: block !important;
-        background: none;
-        border: none;
-        font-size: 24px;
-        color: #2c3e50;
-        cursor: pointer;
-        padding: 8px;
-        z-index: 1001;
-        width: 44px;
-        height: 44px;
-        min-width: 44px;
-        min-height: 44px;
-    }
-    
     /* Герой секция для мобильных */
     .hero {
         padding: 80px 20px 60px !important;
@@ -354,19 +338,6 @@ body {
     
     .nav-link:hover::after {
         width: 0 !important;
-    }
-}
-
-/* Safe area для новых iPhone */
-@supports (padding: max(0px)) {
-    body {
-        padding-left: min(0vmin, env(safe-area-inset-left));
-        padding-right: min(0vmin, env(safe-area-inset-right));
-    }
-    
-    .header {
-        padding-left: max(15px, env(safe-area-inset-left));
-        padding-right: max(15px, env(safe-area-inset-right));
     }
 }
 
