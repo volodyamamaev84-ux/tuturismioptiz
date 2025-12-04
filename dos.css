@@ -172,6 +172,22 @@ body {
         display: none !important;
     }
     
+    /* Гамбургер меню */
+    .menu-toggle {
+        display: block !important;
+        background: none;
+        border: none;
+        font-size: 24px;
+        color: #2c3e50;
+        cursor: pointer;
+        padding: 8px;
+        z-index: 1001;
+        width: 44px;
+        height: 44px;
+        min-width: 44px;
+        min-height: 44px;
+    }
+    
     /* Герой секция для мобильных */
     .hero {
         padding: 80px 20px 60px !important;
@@ -340,6 +356,8 @@ body {
         width: 0 !important;
     }
 }
+
+
 
 /* Улучшение производительности */
 * {
