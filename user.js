@@ -36,30 +36,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // ===== КНОПКА "НАВЕРХ" =====
-    const backToTop = document.querySelector('.back-to-top');
-    
-    function toggleBackToTop() {
-        if (window.scrollY > 300) {
-            backToTop.classList.add('visible');
-        } else {
-            backToTop.classList.remove('visible');
-        }
-    }
-    
-    if (backToTop) {
-        window.addEventListener('scroll', toggleBackToTop);
-        
-        backToTop.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-        
-        toggleBackToTop();
-    }
-    
     // ===== TOUCH ОПТИМИЗАЦИЯ =====
     const touchElements = document.querySelectorAll('.room-card, .btn');
     

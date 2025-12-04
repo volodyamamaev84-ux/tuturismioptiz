@@ -274,39 +274,6 @@ footer {
     font-size: 0.9rem;
 }
 
-/* ===== КНОПКА "НАВЕРХ" ===== */
-.back-to-top {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 50px;
-    height: 50px;
-    background: #ff6b35;
-    color: white;
-    border: none;
-    border-radius: 50%;
-    font-size: 20px;
-    cursor: pointer;
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s;
-    z-index: 999;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-}
-
-.back-to-top.visible {
-    opacity: 1;
-    visibility: visible;
-}
-
-.back-to-top:hover {
-    background: #e55a2b;
-    transform: translateY(-2px);
-}
-
 /* ===== МОБИЛЬНАЯ ОПТИМИЗАЦИЯ ===== */
 @media (max-width: 768px) {
     /* Мобильное меню */
@@ -490,26 +457,5 @@ footer {
         animation-duration: 0.01ms !important;
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
-    }
-}
-
-/* Поддержка темной темы */
-@media (prefers-color-scheme: dark) {
-    body {
-        background-color: #1a1a1a;
-        color: #f0f0f0;
-    }
-    
-    .room-card {
-        background: #2a2a2a;
-        color: #f0f0f0;
-    }
-    
-    .nav-link {
-        color: #f0f0f0;
-    }
-    
-    .hero {
-        background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.9));
     }
 }
