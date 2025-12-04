@@ -1,3 +1,4 @@
+<script>
 // Мобильное меню
 document.addEventListener('DOMContentLoaded', function() {
     // Создаем кнопку гамбургер
@@ -139,3 +140,4 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('resize', setVH);
     window.addEventListener('orientationchange', setVH);
 });
+</script>
