@@ -1,4 +1,4 @@
-// sleep.js - Мобильная оптимизация
+// dos.js - Мобильная оптимизация
 
 document.addEventListener('DOMContentLoaded', function() {
     // ===== МОБИЛЬНОЕ МЕНЮ =====
@@ -18,26 +18,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 navMenu.classList.remove('active');
             });
         });
-        
-        // Закрытие меню при клике вне его
-        document.addEventListener('click', (e) => {
-            if (!navMenu.contains(e.target) && !menuToggle.contains(e.target)) {
-                menuToggle.classList.remove('active');
-                navMenu.classList.remove('active');
-            }
-        });
-        
-        // Закрытие меню по Escape
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && navMenu.classList.contains('active')) {
-                menuToggle.classList.remove('active');
-                navMenu.classList.remove('active');
-            }
-        });
     }
-    
+
     // ===== TOUCH ОПТИМИЗАЦИЯ =====
-    const touchElements = document.querySelectorAll('.service-card, .btn');
+    const touchElements = document.querySelectorAll('.attraction-card, .btn');
     
     touchElements.forEach(el => {
         el.addEventListener('touchstart', function() {
@@ -53,26 +37,44 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
+    // ===== ПЛАВНАЯ ПРОКРУТКА ДЛЯ ЯКОРЕЙ =====
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
+            
+            if (href === '#') return;
+            
+            e.preventDefault();
+            const targetId = href.substring(1);
+            const targetElement = document.getElementById(targetId);
+            
+            if (targetElement) {
+                // Закрываем меню если открыто
+                if (navMenu && navMenu.classList.contains('active')) {
+                    menuToggle.classList.remove('active');
+                    navMenu.classList.remove('active');
+                }
+                
+                const headerHeight = document.querySelector('.header').offsetHeight;
+                const targetPosition = targetElement.offsetTop - headerHeight - 20;
+                
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+    
     // ===== ОПТИМИЗАЦИЯ ИЗОБРАЖЕНИЙ =====
-    const images = document.querySelectorAll('.card-img img');
+    const images = document.querySelectorAll('img');
     images.forEach(img => {
         // Добавляем обработчик ошибок
         img.onerror = function() {
             console.error('Ошибка загрузки изображения:', this.src);
-            // Можно добавить fallback изображение
-            // this.src = 'fallback.jpg';
+            this.style.display = 'none';
         };
     });
     
-    // ===== ИСПРАВЛЕНИЕ ВЫСОТЫ ДЛЯ МОБИЛЬНЫХ =====
-    function setViewportHeight() {
-        const vh = window.innerHeight * 0.01;
-        document.documentElement.style.setProperty('--vh', `${vh}px`);
-    }
-    
-    setViewportHeight();
-    window.addEventListener('resize', setViewportHeight);
-    window.addEventListener('orientationchange', setViewportHeight);
-    
-    console.log('Сайт "Место отдыха" оптимизирован для мобильных устройств');
+    console.log('Сайт оптимизирован для мобильных устройств');
 });
