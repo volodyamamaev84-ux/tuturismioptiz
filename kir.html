@@ -2,15 +2,22 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <title>Кырсаада</title>
-    <link rel="stylesheet" href="sins.css">
+    <link rel="stylesheet" href="danil.css">
 </head>
 <body>
     <header class="header">
         <nav class="navbar">
             <div class="nav-container">
                 <a href="index.html" class="nav-logo">TravelWorld</a>
+                <!-- Кнопка гамбургер для мобильных -->
+                <button class="menu-toggle" aria-label="Открыть меню">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                
                 <ul class="nav-menu">
                     <li class="nav-item">
                         <a href="sleep.html" class="nav-link">Место отдыха</a>
@@ -22,28 +29,34 @@
                         <a href="user.html" class="nav-link">Гостевые дома</a>
                     </li>
                 </ul>
+            </div>
+        </nav>
     </header>
-        <section class="hero">
+    
+    <section class="hero">
         <div class="container">
             <h1>Кырсаада</h1>
-            <img src="kir.jpg">
+            <div class="hero-image">
+                <img src="kir.jpg" alt="Кырсаада" loading="lazy">
+            </div>
             <div class="description">
-            <p><strong>Кырсаада</strong> - это уютное место для отдыха в горах, расположенное недалеко от села Асыма. Он сочетает в себе комфорт современного отеля и атмосферу традиционного якутского гостеприимства. Идеально подходит для туристов, семей и всех, кто хочет насладиться природой и чистым воздухом. Из домика с территории открывается величественный вид на тайгу</p>
-    <a href="https://go.2gis.com/LcSgi" class="btn">Место нахождение</a>
-
-        </div>
+                <p><strong>Кырсаада</strong> - это уютное место для отдыха в горах, расположенное недалеко от села Асыма. Он сочетает в себе комфорт современного отеля и атмосферу традиционного якутского гостеприимства. Идеально подходит для туристов, семей и всех, кто хочет насладиться природой и чистым воздухом. Из домика с территории открывается величественный вид на тайгу</p>
+                <a href="https://go.2gis.com/kMD0C" class="btn">Место нахождение</a>
+            </div>
         </div>
     </section>
-            <footer>
+    
+    <footer>
         <div class="container">
             <div class="footer-content">
                 <div class="footer-column">
-                <div class="room-teert">
-            <p>© 2025 | Горный улус ждет ваших путешествий</p>
+                    <div class="room-teert">
+                        <p>© 2025 | Горный улус ждет ваших путешествий</p>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-</div>
-</footer>
+    </footer>
+    <script src="danil.js"></script>
 </body>
 </html>
