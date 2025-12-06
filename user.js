@@ -10,6 +10,31 @@ document.addEventListener('DOMContentLoaded', function() {
             menuToggle.classList.toggle('active');
             navMenu.classList.toggle('active');
         });
+        
+        // Закрытие меню при клике на ссылку
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                menuToggle.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+        
+        // Закрытие меню при клике вне его
+        document.addEventListener('click', (e) => {
+            if (!navMenu.contains(e.target) && !menuToggle.contains(e.target)) {
+                menuToggle.classList.remove('active');
+                navMenu.classList.remove('active');
+            }
+        });
+        
+        // Закрытие меню по Escape
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && navMenu.classList.contains('active')) {
+                menuToggle.classList.remove('active');
+                navMenu.classList.remove('active');
+            }
+        });
+    }
     
     // ===== TOUCH ОПТИМИЗАЦИЯ =====
     const touchElements = document.querySelectorAll('.room-card, .btn');
@@ -47,5 +72,6 @@ document.addEventListener('DOMContentLoaded', function() {
     setViewportHeight();
     window.addEventListener('resize', setViewportHeight);
     window.addEventListener('orientationchange', setViewportHeight);
-    console.log('Сайт оптимизирован для мобильных устройств');
-};
+    
+    console.log('Сайт гостевых домов оптимизирован для мобильных устройств');
+});
