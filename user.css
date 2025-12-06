@@ -1,6 +1,3 @@
-/* user.css - ОПТИМИЗАЦИЯ ДЛЯ ТЕЛЕФОНА И КОМПЬЮТЕРА */
-
-/* ===== БАЗОВЫЕ СТИЛИ ===== */
 * {
     margin: 0;
     padding: 0;
@@ -23,7 +20,6 @@ html {
     scroll-behavior: smooth;
 }
 
-/* ===== ШАПКА И НАВИГАЦИЯ ===== */
 .header {
     position: fixed;
     top: 0;
@@ -52,7 +48,6 @@ html {
     text-decoration: none;
 }
 
-/* Мобильное меню */
 .menu-toggle {
     display: none;
     flex-direction: column;
@@ -112,7 +107,6 @@ html {
     width: 100%;
 }
 
-/* ===== ГЛАВНАЯ СЕКЦИЯ ===== */
 .hero {
     background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7));
     background-size: cover;
@@ -134,7 +128,6 @@ html {
     margin: 0 auto;
 }
 
-/* ===== КОНТЕЙНЕРЫ ===== */
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -147,7 +140,6 @@ html {
     padding: 0 20px;
 }
 
-/* ===== СЕКЦИЯ ГОСТИНИЦ ===== */
 .rooms {
     padding: 7rem 0;
 }
@@ -221,7 +213,6 @@ html {
     top: 0;
 }
 
-/* ===== КНОПКИ ===== */
 .btn {
     display: inline-block;
     background: #ff6b35;
@@ -242,7 +233,6 @@ html {
     transform: translateY(-2px);
 }
 
-/* ===== ПОДВАЛ ===== */
 footer {
     background: #333;
     color: white;
@@ -262,7 +252,6 @@ footer {
     font-size: 0.9rem;
 }
 
-/* ===== МОБИЛЬНАЯ ОПТИМИЗАЦИЯ ===== */
 @media (max-width: 768px) {
     /* Мобильное меню */
     .menu-toggle {
@@ -306,7 +295,6 @@ footer {
         display: none;
     }
     
-    /* Адаптивный дизайн */
     .hero {
         padding: 80px 20px;
         margin-top: 60px;
@@ -359,7 +347,6 @@ footer {
         padding: 0 15px;
     }
     
-    /* Убираем hover эффекты на тач-устройствах */
     @media (hover: none) {
         .room-card:hover {
             transform: none;
@@ -415,7 +402,6 @@ footer {
     }
 }
 
-/* Для планшетов */
 @media (min-width: 769px) and (max-width: 1024px) {
     .rooms-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -423,18 +409,5 @@ footer {
     
     .cont .rooms-grid {
         grid-template-columns: 1fr;
-    }
-}
-
-/* Безопасные отступы для iPhone */
-@supports (padding: max(0px)) {
-    body {
-        padding-left: env(safe-area-inset-left);
-        padding-right: env(safe-area-inset-right);
-    }
-    
-    .header {
-        padding-left: max(15px, env(safe-area-inset-left));
-        padding-right: max(15px, env(safe-area-inset-right));
     }
 }

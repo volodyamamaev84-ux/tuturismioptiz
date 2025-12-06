@@ -1,7 +1,5 @@
-// sleep.js - Мобильная оптимизация
-
 document.addEventListener('DOMContentLoaded', function() {
-    // ===== МОБИЛЬНОЕ МЕНЮ =====
+
     const menuToggle = document.querySelector('.menu-toggle');
     const navMenu = document.querySelector('.nav-menu');
     
@@ -11,7 +9,6 @@ document.addEventListener('DOMContentLoaded', function() {
             navMenu.classList.toggle('active');
         });
         
-        // Закрытие меню при клике на ссылку
         document.querySelectorAll('.nav-link').forEach(link => {
             link.addEventListener('click', () => {
                 menuToggle.classList.remove('active');
@@ -20,7 +17,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // ===== TOUCH ОПТИМИЗАЦИЯ =====
     const touchElements = document.querySelectorAll('.service-card, .btn');
     
     touchElements.forEach(el => {
@@ -37,18 +33,13 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // ===== ОПТИМИЗАЦИЯ ИЗОБРАЖЕНИЙ =====
     const images = document.querySelectorAll('.card-img img');
     images.forEach(img => {
-        // Добавляем обработчик ошибок
         img.onerror = function() {
             console.error('Ошибка загрузки изображения:', this.src);
-            // Можно добавить fallback изображение
-            // this.src = 'fallback.jpg';
         };
     });
     
-    // ===== ИСПРАВЛЕНИЕ ВЫСОТЫ ДЛЯ МОБИЛЬНЫХ =====
     function setViewportHeight() {
         const vh = window.innerHeight * 0.01;
         document.documentElement.style.setProperty('--vh', `${vh}px`);

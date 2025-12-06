@@ -1,5 +1,3 @@
-// dos.js - Мобильная оптимизация
-
 document.addEventListener('DOMContentLoaded', function() {
     // ===== МОБИЛЬНОЕ МЕНЮ =====
     const menuToggle = document.querySelector('.menu-toggle');
@@ -11,7 +9,6 @@ document.addEventListener('DOMContentLoaded', function() {
             navMenu.classList.toggle('active');
         });
         
-        // Закрытие меню при клике на ссылку
         document.querySelectorAll('.nav-link').forEach(link => {
             link.addEventListener('click', () => {
                 menuToggle.classList.remove('active');
@@ -20,7 +17,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // ===== TOUCH ОПТИМИЗАЦИЯ =====
     const touchElements = document.querySelectorAll('.attraction-card, .btn');
     
     touchElements.forEach(el => {
@@ -37,7 +33,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // ===== ПЛАВНАЯ ПРОКРУТКА ДЛЯ ЯКОРЕЙ =====
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             const href = this.getAttribute('href');
@@ -49,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const targetElement = document.getElementById(targetId);
             
             if (targetElement) {
-                // Закрываем меню если открыто
+
                 if (navMenu && navMenu.classList.contains('active')) {
                     menuToggle.classList.remove('active');
                     navMenu.classList.remove('active');
@@ -66,10 +61,9 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // ===== ОПТИМИЗАЦИЯ ИЗОБРАЖЕНИЙ =====
     const images = document.querySelectorAll('img');
     images.forEach(img => {
-        // Добавляем обработчик ошибок
+
         img.onerror = function() {
             console.error('Ошибка загрузки изображения:', this.src);
             this.style.display = 'none';

@@ -1,6 +1,3 @@
-/* sleep.css - ОПТИМИЗАЦИЯ ДЛЯ ТЕЛЕФОНА И КОМПЬЮТЕРА */
-
-/* ===== БАЗОВЫЕ СТИЛИ ===== */
 * {
     margin: 0;
     padding: 0;
@@ -23,7 +20,6 @@ html {
     scroll-behavior: smooth;
 }
 
-/* ===== ШАПКА И НАВИГАЦИЯ ===== */
 .header {
     position: fixed;
     top: 0;
@@ -52,7 +48,6 @@ html {
     text-decoration: none;
 }
 
-/* Мобильное меню */
 .menu-toggle {
     display: none;
     flex-direction: column;
@@ -112,7 +107,6 @@ html {
     width: 100%;
 }
 
-/* ===== ГЛАВНАЯ СЕКЦИЯ ===== */
 .hero {
     background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7));
     background-size: cover;
@@ -134,7 +128,6 @@ html {
     margin: 0 auto;
 }
 
-/* ===== ОСНОВНОЙ КОНТЕНТ ===== */
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -176,7 +169,6 @@ h3 {
     font-size: 1.5rem;
 }
 
-/* ===== КАРТОЧКИ УСЛУГ ===== */
 .services {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -220,7 +212,6 @@ h3 {
     line-height: 1.3;
 }
 
-/* ===== КНОПКИ ===== */
 .btn {
     display: inline-block;
     background: #ff6b35;
@@ -241,7 +232,6 @@ h3 {
     transform: translateY(-2px);
 }
 
-/* ===== ФАКТЫ ===== */
 .facts {
     background: #f8f9fa;
     padding: 1.5rem;
@@ -263,7 +253,6 @@ h3 {
     line-height: 1.6;
 }
 
-/* ===== ПОДВАЛ ===== */
 footer {
     background: #333;
     color: white;
@@ -283,7 +272,6 @@ footer {
     font-size: 0.9rem;
 }
 
-/* ===== КНОПКА "НАВЕРХ" ===== */
 .back-to-top {
     position: fixed;
     bottom: 20px;
@@ -316,9 +304,8 @@ footer {
     transform: translateY(-2px);
 }
 
-/* ===== МОБИЛЬНАЯ ОПТИМИЗАЦИЯ ===== */
 @media (max-width: 768px) {
-    /* Мобильное меню */
+
     .menu-toggle {
         display: flex;
     }
@@ -360,7 +347,6 @@ footer {
         display: none;
     }
     
-    /* Адаптивный дизайн */
     .hero {
         padding: 80px 20px;
         margin-top: 60px;
@@ -413,7 +399,6 @@ footer {
         padding: 0 15px;
     }
     
-    /* Убираем hover эффекты на тач-устройствах */
     @media (hover: none) {
         .service-card:hover {
             transform: none;
@@ -465,7 +450,6 @@ footer {
     }
 }
 
-/* Для планшетов */
 @media (min-width: 769px) and (max-width: 1024px) {
     .services {
         grid-template-columns: repeat(2, 1fr);
@@ -474,18 +458,5 @@ footer {
     .content {
         grid-template-columns: 1.5fr 1fr;
         gap: 2rem;
-    }
-}
-
-/* Безопасные отступы для iPhone */
-@supports (padding: max(0px)) {
-    body {
-        padding-left: env(safe-area-inset-left);
-        padding-right: env(safe-area-inset-right);
-    }
-    
-    .header {
-        padding-left: max(15px, env(safe-area-inset-left));
-        padding-right: max(15px, env(safe-area-inset-right));
     }
 }
