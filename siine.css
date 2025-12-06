@@ -1,26 +1,41 @@
+/* ===== БАЗОВЫЕ СТИЛИ ===== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
 }
-        
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     color: #333;
     overflow-x: hidden;
+    background-color: #f8f9fa;
+    padding-top: env(safe-area-inset-top);
 }
-        .navbar {
-    padding: 0 2rem;
+
+html {
+    font-size: 16px;
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
 }
+
+/* ===== ШАПКА И НАВИГАЦИЯ ===== */
 .header {
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1000;
     background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
+    padding: 10px 0;
+}
+
+.navbar {
+    padding: 0 1rem;
 }
 
 .nav-container {
@@ -30,6 +45,7 @@ body {
     justify-content: space-between;
     align-items: center;
     height: 70px;
+    padding: 0 20px;
 }
 
 .nav-logo {
@@ -37,6 +53,29 @@ body {
     font-weight: bold;
     color: #2c3e50;
     text-decoration: none;
+}
+
+/* Мобильное меню */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 44px;
+    height: 44px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1001;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: #2c3e50;
+    border-radius: 2px;
+    transition: all 0.3s ease;
 }
 
 .nav-menu {
@@ -54,6 +93,7 @@ body {
     font-weight: 500;
     transition: color 0.3s ease;
     position: relative;
+    padding: 5px 0;
 }
 
 .nav-link:hover {
@@ -74,84 +114,284 @@ body {
 .nav-link:hover::after {
     width: 100%;
 }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        .hero {
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
-            background-size: cover;
-            background-position: center;
-            color: white;
-            text-align: center;
-            padding: 100px 0;
-            margin-bottom: 40px;
-        }
-        
-        .hero h1 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-        }
-        
-        .hero p {
-            font-size: 1.2rem;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-                .content {
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 30px;
-            margin-bottom: 50px;
-        }
 
-        @media (max-width: 768px) {
-            .content {
-                grid-template-columns: 1fr;
-            }
-        }
-                        footer {
-            background: #333;
-            color: white;
-            padding: 3rem 0 1.5rem;
-        }
-                .btn {
-            display: inline-block;
-            background: #ff6b35;
-            color: white;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background 0.3s;
-            margin-top: 1rem;
+/* ===== ГЛАВНАЯ СЕКЦИЯ ===== */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7));
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 120px 0 60px;
+    margin-bottom: 40px;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    line-height: 1.2;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-image {
+    max-width: 800px;
+    margin: 0 auto 40px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.hero-image img:hover {
+    transform: scale(1.02);
+}
+
+/* ===== ОПИСАНИЕ ===== */
+
+.description p {
+    font-size: 1.2rem;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+.description strong {
+    font-size: 1.3rem;
+}
+
+/* ===== КНОПКИ ===== */
+.btn {
+    display: inline-block;
+    background: #ff6b35;
+    color: white;
+    padding: 14px 28px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: all 0.3s;
+    margin-top: 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.btn:hover {
+    background: #e55a2b;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 107, 53, 0.4);
+}
+
+/* ===== ПОДВАЛ ===== */
+footer {
+    background: #333;
+    color: white;
+    padding: 3rem 0 1.5rem;
+    margin-top: 60px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-column {
+    text-align: center;
+}
+
+.room-teert {
+    color: #999;
+    font-size: 0.9rem;
+}
+
+/* ===== МОБИЛЬНАЯ ОПТИМИЗАЦИЯ ===== */
+@media (max-width: 768px) {
+    /* Мобильное меню */
+    .menu-toggle {
+        display: flex;
+    }
+    
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: min(100%, 300px);
+        height: 100vh;
+        background: white;
+        flex-direction: column;
+        padding: 80px 30px 30px;
+        transition: right 0.3s ease;
+        box-shadow: -5px 0 20px rgba(0,0,0,0.1);
+        z-index: 1000;
+        overflow-y: auto;
+    }
+    
+    .nav-menu.active {
+        right: 0;
+    }
+    
+    .nav-item {
+        margin: 0 0 20px 0;
+        width: 100%;
+    }
+    
+    .nav-link {
+        display: block;
+        padding: 15px;
+        text-align: center;
+        font-size: 16px;
+        background: #f8f9fa;
+        border-radius: 8px;
+        margin-left: 0;
+    }
+    
+    .nav-link::after {
+        display: none;
+    }
+    
+    /* Герой секция */
+    .hero {
+        padding: 100px 0 40px;
+        margin-top: 70px;
+    }
+    
+    .hero h1 {
+        font-size: 1.8rem;
+        padding: 0 15px;
+    }
+    
+    .hero-image {
+        margin: 0 auto 30px;
+        border-radius: 8px;
+    }
+    
+    .description {
+        padding: 20px;
+        margin: 0 15px;
+    }
+    
+    .description p {
+        font-size: 1.1rem;
+    }
+    
+    .description strong {
+        font-size: 1.2rem;
+    }
+    
+    .btn {
+        width: 100%;
+        padding: 16px;
+        font-size: 16px;
+    }
+    
+    footer {
+        padding: 2rem 0 1rem;
+        margin-top: 40px;
+    }
+    
+    /* Убираем hover эффекты на тач-устройствах */
+    @media (hover: none) {
+        .hero-image img:hover {
+            transform: none;
         }
         
-        .footer-column h3 {
-            margin-bottom: 1.5rem;
-            font-size: 1.2rem;
-            color: #fdbb2d;
+        .btn:hover {
+            transform: none;
+            box-shadow: none;
         }
         
-        .footer-column ul {
-            list-style: none;
+        .nav-link:hover {
+            color: #333;
+            background: #f8f9fa;
         }
-        
-        .footer-column ul li {
-            margin-bottom: 0.8rem;
-        }
-        
-        .footer-column ul li a {
-            color: #ccc;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-        
-        .footer-column ul li a:hover {
-            color: #fdbb2d;
-        }
-                .room-teert {
-            text-align: center;
-            color: #999;
-        }
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 90px 0 30px;
+    }
+    
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+    
+    .hero-image {
+        margin-bottom: 25px;
+    }
+    
+    .description {
+        padding: 15px;
+        margin: 0 10px;
+    }
+    
+    .description p {
+        font-size: 1rem;
+    }
+    
+    .nav-container {
+        padding: 0 15px;
+        height: 60px;
+    }
+    
+    .nav-logo {
+        font-size: 1.5rem;
+    }
+}
+
+/* Для планшетов */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+    
+    .description {
+        padding: 25px;
+    }
+}
+
+/* Безопасные отступы для iPhone */
+@supports (padding: max(0px)) {
+    body {
+        padding-left: env(safe-area-inset-left);
+        padding-right: env(safe-area-inset-right);
+    }
+    
+    .nav-container {
+        padding-left: max(20px, env(safe-area-inset-left));
+        padding-right: max(20px, env(safe-area-inset-right));
+    }
+}
+
+/* Оптимизация анимаций */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Улучшение контраста для доступности */
+@media (prefers-contrast: high) {
+    .nav-link {
+        color: #000;
+    }
+    
+    .btn {
+        background: #cc0000;
+    }
+}
