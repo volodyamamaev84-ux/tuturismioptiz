@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <title>Озеро "Хаахынайдаах"</title>
     <link rel="stylesheet" href="danil.css">
 </head>
@@ -11,6 +11,13 @@
         <nav class="navbar">
             <div class="nav-container">
                 <a href="index.html" class="nav-logo">TravelWorld</a>
+                <!-- Кнопка гамбургер для мобильных -->
+                <button class="menu-toggle" aria-label="Открыть меню">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                
                 <ul class="nav-menu">
                     <li class="nav-item">
                         <a href="sleep.html" class="nav-link">Место отдыха</a>
@@ -22,28 +29,35 @@
                         <a href="user.html" class="nav-link">Гостевые дома</a>
                     </li>
                 </ul>
+            </div>
+        </nav>
     </header>
-        <section class="hero">
+    
+    <section class="hero">
         <div class="container">
             <h1>Озеро "Хаахынайдаах"</h1>
-            <img src="haha.jpeg">
+            <div class="hero-image">
+                <img src="haha.jpeg" alt="Озеро Хаахынайдаах" loading="lazy">
+            </div>
             <div class="description">
-            <p><strong>Хаахынайдаах</strong> - Местными красотами можно насладиться на озере Хаахынайдаах. Озеро Хаахынайдаах находится в 85 км. к северо-западу от села Бердигестях и в 50 км. к северо-западной стороне от с. Асыма. Озеро Хаахынайдаах омывает река Хорогой, которая впадает в реку Тюгене, а река Тюгене в свою очередь впадает в реку Лена.
+                <p><strong>Хаахынайдаах</strong> - Местными красотами можно насладиться на озере Хаахынайдаах. Озеро Хаахынайдаах находится в 85 км. к северо-западу от села Бердигестях и в 50 км. к северо-западной стороне от с. Асыма. Озеро Хаахынайдаах омывает река Хорогой, которая впадает в реку Тюгене, а река Тюгене в свою очередь впадает в реку Лена.
 Граница ООПТ озера Хаахынайдаах проходит в радиусе 300 метров от средне многолетнего уреза воды озера Хаахынайдаах. По своей природе, месту расположения озеро Хаахынайдаах является одним из достопримечательности улуса. Это уникальное и единственное озеро в улусе, имеющее связь с бассейном реки Лена, с твердым песчаным дном, расположенное на живописной местности, с высокими берегами, покрытыми сосновыми и смешанными лесами с березой. В озере водятся карась и речные рыбы: сорога, язь, окунь, щука, гольян, сиг и другие виды рыб.</p>
-    <a href="https://go.2gis.com/AH2pd" class="btn">Место нахождение</a>
-        </div>
+                <a href="https://go.2gis.com/kMD0C" class="btn">Место нахождение</a>
+            </div>
         </div>
     </section>
-            <footer>
+    
+    <footer>
         <div class="container">
             <div class="footer-content">
                 <div class="footer-column">
-                <div class="room-teert">
-            <p>© 2025 | Горный улус ждет ваших путешествий</p>
+                    <div class="room-teert">
+                        <p>© 2025 | Горный улус ждет ваших путешествий</p>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-</div>
-</footer>
+    </footer>
+    <script src="danil.js"></script>
 </body>
 </html>

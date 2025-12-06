@@ -2,8 +2,9 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Гостевой дом - Горный улус</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="theme-color" content="#ff6b35">
+    <title>Гостевые дома - Горный улус</title>
     <link rel="stylesheet" href="user.css">
 </head>
 <body>
@@ -11,6 +12,14 @@
         <nav class="navbar">
             <div class="nav-container">
                 <a href="index.html" class="nav-logo">TravelWorld</a>
+                
+                <!-- Кнопка гамбургер для мобильных -->
+                <button class="menu-toggle" aria-label="Открыть меню">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                
                 <ul class="nav-menu">
                     <li class="nav-item">
                         <a href="sleep.html" class="nav-link">Место отдыха</a>
@@ -20,78 +29,88 @@
                     </li>
                     <li class="nav-item">
                         <a href="user.html" class="nav-link">Гостевые дома</a>
+                    </li>
                 </ul>
+            </div>
+        </nav>
     </header>
+    
     <section class="hero">
         <div class="container">
             <h1>Гостевые дома Горного улуса</h1>
-            <p>Комфортабельные гостевые в Горном улусе </p>
+            <p>Комфортабельные гостевые в Горном улусе</p>
         </div>
     </section>
-    <section>
-            <section class="rooms" id="rooms">
+    
+    <section class="rooms" id="rooms">
         <div class="cont">
             <h2 class="section-title">Гостевые дома</h2>
             <div class="rooms-grid">
                 <div class="room-card">
-                    <img src="bes.jpg" class="room-image">
+                    <img src="bes.jpg" class="room-image" alt="Гостевой дом Бэс Кытыл">
                     <div class="room-info">
                         <h3>Бэс Кытыл</h3>
-<p>Вам нужна смена обстановки, а возможности взять длительный отпуск пока нет? База отдыха Бэс Кытыл может оказаться для вас подходящим вариантом! Вам предоставят номер, оборудованный всем, что необходимо для полноценного сна и спокойного отдыха. Выбрать подходящий вам поможет администратор. Он примет во внимание число гостей, все пожелания и длительность проживания.</p>
-                            <ul class="room-features">
-                            <li>Часы работы: Пн 12:00-23:00, Вт 12:00-23:00, Ср 12:00-23:00, Чт 12:00-23:00, Пт 12:00-23:00, Сб 12:00-23:00, Вс 12:00-23:00</li>
+                        <p>Вам нужна смена обстановки, а возможности взять длительный отпуск пока нет? База отдыха Бэс Кытыл может оказаться для вас подходящим вариантом!</p>
+                        <ul class="room-features">
+                            <li>Часы работы: Ежедневно 12:00-23:00</li>
                             <li>Телефон: +7(965)994-94-60</li>
+                            <li>Уютные номера для отдыха</li>
+                            <li>Индивидуальный подбор вариантов</li>
                         </ul>
-                            <a href="https://go.2gis.com/VFOtx" class="btn">Место нахождение</a>
-                    </div>
-                </div>
-
-    </section>
-
-    <section class="rooms" id="rooms">
-        <div class="container">
-            <h2 class="section-title"></h2>
-            <div class="rooms-grid">
-                <div class="room-card">
-                    <img src="shishka.jpg" class="room-image">
-                    <div class="room-info">
-                        <h3>Туристический дом «Шишки»</h3>
-                        <p>Добро пожаловать на нашу базу отдыха на берегу Маатты!
-Мы работаем в весенне-летне-осенний период, когда природа особенно красива, а отдых на свежем воздухе приносит максимум удовольствия.
-На территории вас ждут:</p>
-                            <ul class="room-features">
-                            <li>Два уютных A-frame домика с видом на воду и лес.</li>
-                            <li>Баня — для расслабления после активного дня.</li>
-                            <li>Детская площадка — безопасное место для игр.</li>
-                            <li>Беседка и зона костра — для душевных вечеров, шашлыков и теплых разговоров.</li>
-                        </ul>
-                        <a href="https://go.2gis.com/e9DnP" class="btn">Место нахождение</a>
-                    </div>
-                </div>
-
-                <div class="room-card">
-                    <img src="maatta.webp" class="room-image">
-                    <div class="room-info">
-                        <h3>
-Гостевой дом "Maatta house"</h3>
-                        <p>Приглашаем Вас в базу отдыха «Маатта», которая включает в себя комфортный отдых в лесу и активное времяпровождение в летнее время. База находится в в селе Бердигестях Горного улуса, на правом берегу водохранилища красивой реки Маатта. Удобная транспортная логистика по прекрасной асфальтированной дороге ФАД «Вилюйский» всего 1,5 - 2 ч. езды от г. Якутска приведет вас в таинственный сосновый бор Горного улуса.</p>
-                        </ul>
-                        <a href="https://go.2gis.com/4DutL" class="btn">Место нахождение</a>
+                        <a href="https://go.2gis.com/VFOtx" class="btn" target="_blank">Место нахождения</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-        <footer>
+
+    <section class="rooms">
+        <div class="container">
+            <div class="rooms-grid">
+                <div class="room-card">
+                    <img src="shishka.jpg" class="room-image" alt="Туристический дом Шишки">
+                    <div class="room-info">
+                        <h3>Туристический дом «Шишки»</h3>
+                        <p>Добро пожаловать на базу отдыха на берегу Маатты! Весенне-летне-осенний период, когда природа особенно красива.</p>
+                        <ul class="room-features">
+                            <li>Уютные A-frame домики с видом на воду</li>
+                            <li>Баня для расслабления</li>
+                            <li>Детская площадка</li>
+                            <li>Беседка и зона костра</li>
+                        </ul>
+                        <a href="https://go.2gis.com/e9DnP" class="btn" target="_blank">Место нахождения</a>
+                    </div>
+                </div>
+
+                <div class="room-card">
+                    <img src="maatta.webp" class="room-image" alt="Гостевой дом Maatta house">
+                    <div class="room-info">
+                        <h3>Гостевой дом "Maatta house"</h3>
+                        <p>Приглашаем Вас в базу отдыха «Маатта» на берегу красивой реки Маатта в сосновом бору Горного улуса.</p>
+                        <ul class="room-features">
+                            <li>Удобная транспортная доступность</li>
+                            <li>Живописное расположение</li>
+                            <li>Сосновый бор Горного улуса</li>
+                            <li>Идеально для летнего отдыха</li>
+                        </ul>
+                        <a href="https://go.2gis.com/4DutL" class="btn" target="_blank">Место нахождения</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
         <div class="container">
             <div class="footer-content">
                 <div class="footer-column">
                     <div class="room-teert">
-            <p>© 2025 | Горный улус ждет ваших путешествий</p>
+                        <p>© 2025 | Горный улус ждет ваших путешествий</p>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-</div>
-</footer>
+    </footer>
+    <script src="user.js"></script>
 </body>
 </html>
